@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desvende Seu Potencial Empreendedor com Grupo Hinode</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0a09;
+        }
+
+        .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="text-stone-300 overflow-x-hidden">
+
+<div class="relative min-h-screen bg-stone-950">
+    <main class="container mx-auto px-6 py-20 space-y-32">
+
+        <!-- HERO -->
+        <section class="text-center max-w-4xl mx-auto scroll-reveal">
+            <h1 class="font-display text-5xl md:text-7xl font-extrabold mb-6">
+                <span class="bg-gradient-to-r from-fuchsia-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+                    Desvende Seu Potencial Empreendedor
+                </span>
+            </h1>
+            <p class="font-display text-2xl md:text-3xl text-stone-100 mb-6">
+                Conquiste a Liberdade com o Grupo Hinode!
+            </p>
+            <p class="text-lg md:text-xl text-stone-400">
+                Cansado(a) da rotina e em busca de uma oportunidade real de crescimento financeiro,
+                flexibilidade e reconhecimento? Aqui começa uma nova história.
+            </p>
+        </section>
+
+        <!-- BENEFÍCIOS -->
+        <section class="scroll-reveal">
+            <h2 class="font-display text-4xl text-center text-stone-100 mb-12">
+                Uma Plataforma Completa para o Seu Sucesso
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="font-display text-xl text-stone-100 mb-2">Produtos Exclusivos</h3>
+                    <p class="text-stone-400">
+                        Portfólio completo em perfumaria, cosméticos e bem-estar.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="font-display text-xl text-stone-100 mb-2">Plano de Carreira</h3>
+                    <p class="text-stone-400">
+                        Ganhos ilimitados, bônus, viagens e reconhecimento profissional.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="font-display text-xl text-stone-100 mb-2">Treinamento e Suporte</h3>
+                    <p class="text-stone-400">
+                        Capacitação contínua e acompanhamento estratégico.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS -->
+        <section class="scroll-reveal">
+            <h2 class="font-display text-4xl text-center text-stone-100 mb-12">
+                Histórias de Sucesso Reais
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl italic">
+                    “Em menos de dois anos conquistei liberdade financeira.”
+                    <p class="mt-4 font-display text-fuchsia-400">— Mariana R.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl italic">
+                    “Aqui encontrei propósito, renda e crescimento.”
+                    <p class="mt-4 font-display text-fuchsia-400">— Carlos P.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl italic">
+                    “Posso trabalhar e estar presente com minha família.”
+                    <p class="mt-4 font-display text-fuchsia-400">— Fernanda L.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="scroll-reveal">
+            <div class="glass-card rounded-3xl p-16 text-center">
+                <h2 class="font-display text-4xl text-stone-100 mb-6">
+                    Pronto(a) para Transformar Sua Vida?
+                </h2>
+
+                <p class="text-lg text-stone-400 mb-10">
+                    Dê o primeiro passo agora e descubra como começar.
+                </p>
+
+                <!-- ✅ BOTÃO CORRIGIDO (SEM ONCLICK / SEM ALERT) -->
+                <button
+                    id="btnCadastro"
+                    type="button"
+                    class="w-full md:w-auto px-14 py-5 bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white font-display font-bold text-xl rounded-xl hover:scale-105 transition-all duration-300">
+                    CLIQUE PARA SE CADASTRAR
+                </button>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- SCRIPT ANIMAÇÃO (mantido) -->
+<script>
+    const elements = document.querySelectorAll('.scroll-reveal');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    elements.forEach(el => observer.observe(el));
+</script>
+
+<!-- ✅ SCRIPT DO BOTÃO (NOVO, LIMPO, FUNCIONANDO) -->
+<script>
+    const btn = document.querySelector("#btnCadastro");
+
+    btn?.addEventListener("click", () => {
+        window.location.assign(
+            "https://docs.google.com/forms/d/e/1FAIpQLScQ29P-cVDlsqiPWHW1R3wF9aU9Xv4aJFu2VBxBFQLv2pujKQ/viewform?usp=dialog"
+        );
+    });
+</script>
+
+</body>
+</html>
+
