@@ -1,2 +1,2 @@
-# castrohinode
-Original URL: [https://cadastrohinode.com.br
+# CadastroHinode
+Original URL: [https://CadastroHinode.com.br
